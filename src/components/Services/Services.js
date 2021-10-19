@@ -13,10 +13,10 @@ const Services = () => {
     // console.log(Services)
 
     return (
-        <div className="bg-light">
+        <div className="bg-light" >
             <h1 id="featured-services" className="font-body fw-bold mt-5 ">FEATURED SERVICES</h1>
             <Container>
-                <Row xs={1} md={2} lg={3} className="g-4 mt-5border-primary">
+                <Row id="services" xs={1} md={2} lg={3} className="g-4 mt-5border-primary">
                     {
                         services.map(service => <Service key={service.id} service={service}></Service>)
                     }

@@ -1,11 +1,11 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+
 
 const Footer = () => {
     return (
         <div className="bg-dark text-white">
-            <Container >
+            <Container>
                 <Row className="align-items-center ">
                     <Col className="d-flex justify-content-center">
                         <div className="text-start">

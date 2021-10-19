@@ -6,7 +6,7 @@ const img = 'https://i.ibb.co/M7860t3/Senior-woman-holding-bottle-of-pills-durin
 const AboutUs = () => {
     return (
         <div className="bg-light bg-light font-body">
-            <h1 className="mt-5 py-3 text-uppercase fw-bold">About Us</h1>
+            <h1 className="py-3 text-uppercase fw-bold">About Us</h1>
             <img src={img} alt="" className="h-50" />
             <Container className="text-start mt-5">
 
