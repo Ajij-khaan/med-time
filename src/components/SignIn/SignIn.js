@@ -2,10 +2,14 @@ import Button from '@restart/ui/esm/Button';
 import React from 'react';
 import { Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
 
 const googleImg = 'https://i.ibb.co/p3C2Tq2/google.jpg';
 
 const SignIn = () => {
+
+    const { signInUsingGoogle } = useAuth();
+
     return (
         <div>
             <div className="mb-5">
@@ -18,7 +22,7 @@ const SignIn = () => {
                         </div>
                         <div className="border border-gray rounded-pill px-5 py-1 mb-3 fw-bold d-flex justify-content-start">
                             <img src={googleImg} alt="" />
-                            <Button className="ps-3">Sign In With Google</Button>
+                            <Button onClick={signInUsingGoogle} className="ps-3">Sign In With Google</Button>
                         </div>
 
                         <br />

@@ -7,6 +7,7 @@ import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import SignIn from './components/SignIn/SignIn';
 import SignUp from './components/SignUp/SignUp';
+import AuthProvider from './context/AuthProvider';
 
 
 function App() {
@@ -14,33 +15,35 @@ function App() {
     <div className="App">
       {/* <h1 className="font-body fw-bold">THis is header</h1> */}
 
-      <Router>
-        <Header></Header>
-        <Switch>
-          <Route exact path="/">
-            <Home></Home>
-          </Route>
-          <Route path="/home">
-            <Home></Home>
-          </Route>
-          <Route path="/about">
-            <AboutUs></AboutUs>
-          </Route>
-          <Route path="/signIn">
-            <SignIn></SignIn>
-          </Route>
-          <Route path="/signUp">
-            <SignUp></SignUp>
-          </Route>
-          <Route path="/">
-            <Home></Home>
-          </Route>
-          <Route path="/">
-            <Home></Home>
-          </Route>
-        </Switch>
-        <Footer></Footer>
-      </Router>
+      <AuthProvider>
+        <Router>
+          <Header></Header>
+          <Switch>
+            <Route exact path="/">
+              <Home></Home>
+            </Route>
+            <Route path="/home">
+              <Home></Home>
+            </Route>
+            <Route path="/about">
+              <AboutUs></AboutUs>
+            </Route>
+            <Route path="/signIn">
+              <SignIn></SignIn>
+            </Route>
+            <Route path="/signUp">
+              <SignUp></SignUp>
+            </Route>
+            <Route path="/">
+              <Home></Home>
+            </Route>
+            <Route path="/">
+              <Home></Home>
+            </Route>
+          </Switch>
+          <Footer></Footer>
+        </Router>
+      </AuthProvider>
 
     </div>
   );
