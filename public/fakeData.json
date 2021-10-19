@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "Covid-19 Consultation",
+        "description": "Bret",
+        "img": "https://i.ibb.co/9pKdxvy/3.jpg"
+    },
+    {
+        "id": 2,
+        "name": "SApecial Followup",
+        "description": "Bret",
+        "img": "https://i.ibb.co/6XDLm6j/4.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Cardiology",
+        "description": "Bret",
+        "img": "https://i.ibb.co/5RHMdW2/6.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Mental Health",
+        "description": "Bret",
+        "img": "https://i.ibb.co/jbGKY9B/5.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Orthopedics",
+        "description": "Bret",
+        "img": "https://i.ibb.co/PYj8nN9/2.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Gynecology",
+        "description": "Bret",
+        "img": "https://i.ibb.co/PYj8nN9/2.jpg"
+    }
+]
