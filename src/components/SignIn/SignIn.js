@@ -10,7 +10,7 @@ const googleImg = 'https://i.ibb.co/p3C2Tq2/google.jpg';
 
 const SignIn = () => {
 
-    const { signInUsingGoogle, handleEmail, handlePassword, handleSubmit, fromSignIn, resetPassword, setIsLoading, setUser } = useAuth();
+    const { signInUsingGoogle, handleEmail, handlePassword, handleSubmit, fromSignIn, resetPassword, setIsLoading, setUser, error } = useAuth();
 
     fromSignIn();
     //Redirect to home after signup using goole
@@ -57,6 +57,9 @@ const SignIn = () => {
                             </Form.Group>
                             <div className="text-end mb-2">
                                 <button onClick={resetPassword} className="text-primary fw-bold ">Forget Password</button>
+                            </div>
+                            <div className="text-end mb-2">
+                                <button className="text-danger fw-bold ">{error}</button>
                             </div>
                             <button className="btn btn-primary rounded-pill w-100 mb-3" variant="primary" type="submit">
                                 Sign In

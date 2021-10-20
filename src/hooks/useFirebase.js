@@ -14,7 +14,7 @@ const useFirebase = () => {
     const [password, setPassword] = useState('');
     const [isLogin, setIsLogin] = useState(false);
 
-    // const [error, setError] = useState();
+    const [error, setError] = useState();
     const [isLoading, setIsLoading] = useState(true);
 
     const auth = getAuth();
@@ -63,6 +63,10 @@ const useFirebase = () => {
                 const user = result.user;
                 setUser(user);
                 console.log(user)
+                setError('')
+            })
+            .catch((error) => {
+                setError(error.message);
             })
     }
     //Firebase Logout System
@@ -74,6 +78,10 @@ const useFirebase = () => {
                 setUserName();
                 verifyEmail();
                 console.log(user)
+                setError('')
+            })
+            .catch((error) => {
+                setError(error.message);
             })
     }
 
@@ -86,7 +94,12 @@ const useFirebase = () => {
     const logOut = () => {
         setIsLoading(true);
         signOut(auth)
-            .then(() => { })
+            .then(() => {
+                setError('')
+            })
+            .catch((error) => {
+                setError(error.message);
+            })
             .finally(() => setIsLoading(false));
     }
 
@@ -95,6 +108,10 @@ const useFirebase = () => {
         sendEmailVerification(auth.currentUser)
             .then(result => {
                 console.log(result);
+                setError('')
+            })
+            .catch((error) => {
+                setError(error.message);
             })
     };
 
@@ -103,6 +120,10 @@ const useFirebase = () => {
         sendPasswordResetEmail(auth, email)
             .then(result => {
                 console.log(result);
+                setError('')
+            })
+            .catch((error) => {
+                setError(error.message);
             })
     }
 
@@ -123,6 +144,7 @@ const useFirebase = () => {
     return {
         user,
         setUser,
+        error,
         isLoading,
         signInUsingGoogle,
         logOut,
