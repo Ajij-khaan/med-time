@@ -4,10 +4,14 @@ import { Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
+
 const googleImg = 'https://i.ibb.co/p3C2Tq2/google.jpg';
 
 const SignUp = () => {
-    const { signInUsingGoogle } = useAuth();
+
+    const { signInUsingGoogle, handleName, handleEmail, handlePassword, handleSubmit, fromSignUp } = useAuth();
+
+    fromSignUp();
     return (
         <div className="mb-5">
             <div className='d-flex justify-content-center align-items-center mt-5 font-body'>
@@ -24,25 +28,25 @@ const SignUp = () => {
 
                     <br />
                     <small className="text-muted ">or Sign Up WIth Email </small>
-                    <Form>
+                    <form onSubmit={handleSubmit}>
                         <Form.Group controlId="formBasicEmail">
                             <Form.Label className="fw-bold mt-4">Name</Form.Label>
-                            <Form.Control className="rounded-pill" type="email" />
+                            <Form.Control onBlur={handleName} className="rounded-pill" type="text" />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label className="fw-bold mt-4">Email address</Form.Label>
-                            <Form.Control className="rounded-pill" type="email" />
+                            <Form.Control onBlur={handleEmail} className="rounded-pill" type="email" />
                         </Form.Group>
 
                         <Form.Group className="mb-3" controlId="formBasicPassword">
                             <Form.Label className="fw-bold ">Password</Form.Label>
-                            <Form.Control className="rounded-pill " type="password" />
+                            <Form.Control onBlur={handlePassword} className="rounded-pill " type="password" />
                         </Form.Group>
 
                         <Button className="btn btn-primary rounded-pill w-100 mb-3" variant="primary" type="submit">
                             Sign UP
                         </Button>
-                    </Form>
+                    </form>
                     <p>Already Registerd? <span className="fw-bold text-primary"><Link to="/signIn" className="text-decoration-none">Signin Here</Link></span></p>
                 </div>
             </div>

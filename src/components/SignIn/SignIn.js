@@ -3,18 +3,19 @@ import React from 'react';
 import { Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
-import { useState } from "react";
+
+
+
+
 
 const googleImg = 'https://i.ibb.co/p3C2Tq2/google.jpg';
 
 const SignIn = () => {
 
-    const { signInUsingGoogle } = useAuth();
+    const { signInUsingGoogle, handleEmail, handlePassword, handleSubmit, fromSignIn } = useAuth();
 
-    const [email, setEmail] = useState();
-    const handleEmail = e => {
-        console.log(e.target.value);
-    }
+    fromSignIn();
+
 
 
     return (
@@ -34,7 +35,7 @@ const SignIn = () => {
 
                         <br />
                         <small className="text-muted">or Sign in WIth Email </small>
-                        <Form>
+                        <form onSubmit={handleSubmit}>
                             <Form.Group className="mb-3" controlId="formBasicEmail">
                                 <Form.Label className="fw-bold mt-4">Email address</Form.Label>
                                 <Form.Control onBlur={handleEmail} className="rounded-pill" type="email" />
@@ -43,13 +44,13 @@ const SignIn = () => {
 
                             <Form.Group className="mb-3" controlId="formBasicPassword">
                                 <Form.Label className="fw-bold ">Password</Form.Label>
-                                <Form.Control className="rounded-pill " type="password" />
+                                <Form.Control onBlur={handlePassword} className="rounded-pill " type="password" />
                             </Form.Group>
 
-                            <Button className="btn btn-primary rounded-pill w-100 mb-3" variant="primary" type="submit">
+                            <button className="btn btn-primary rounded-pill w-100 mb-3" variant="primary" type="submit">
                                 Sign In
-                            </Button>
-                        </Form>
+                            </button>
+                        </form>
                         <p>Noy yet Registerd? <span className="fw-bold text-primary"><Link to="/signUp" className="text-decoration-none">SignUp Here</Link></span></p>
                     </div>
                 </div>
