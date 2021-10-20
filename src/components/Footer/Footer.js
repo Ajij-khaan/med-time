@@ -1,5 +1,6 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 
 const Footer = () => {
@@ -7,29 +8,35 @@ const Footer = () => {
         <div className="bg-dark text-white">
             <Container>
                 <Row className="align-items-center ">
-                    <Col className="d-flex justify-content-center">
+                    <Col sm={12} md={6} lg={4} className="d-flex justify-content-center">
                         <div className="text-start">
-                            <p className="fs-1">MEDTIME</p>
-                            <p className="fs-5">0174282477</p>
-                            <p className="fs-5">Email:</p>
+                            <span className="fs-1">MEDTIME</span> <br />
+                            <span className="fs-5">0174282477</span> <br />
+                            <span className="fs-5">Email:</span> <br />
                         </div>
                     </Col>
-                    <Col className="d-flex justify-content-center">
+
+                    <Col sm={12} md={6} lg={4} className="d-flex justify-content-center">
                         <div className="text-white fs-5 text-start ">
-                            <a href="#home" className="d-block text-decoration-none text-white ">About US</a>
-                            <a href="#home" className="d-block text-decoration-none text-white">How It WOrks</a>
-                            <a href="#home" className="d-block text-decoration-none text-white">Featurd Service</a>
-                            <a href="#home" className="d-block text-decoration-none text-white">FAq</a>
+                            <Link to="#home" className="d-block text-decoration-none text-white ">About US</Link>
+                            <Link to="#home" className="d-block text-decoration-none text-white">How It WOrks</Link>
+                            <Link to="/home/featured-services" className="d-block text-decoration-none text-white">Featurd Service</Link>
+                            <Link to="#home" className="d-block text-decoration-none text-white">FAq</Link>
 
                         </div>
                     </Col>
-                    <Col className="d-flex justify-content-center">
-                        <div className="text-decoration-none fs-5 text-start">
-                            <a href="#home" className="d-block text-decoration-none text-white py-1">For Doctors</a>
-                            <a href="#home" className="d-block text-decoration-none text-white  py-1">Terms and Condition</a>
-                            <a href="#home" className="d-block text-decoration-none text-white  py-1">Privacy Policy</a>
+                    <Col sm={12} md={6} lg={4} className="d-flex justify-content-center">
+                        <div className="text-white fs-5 text-start ">
+                            <Link to="#home" className="d-block text-decoration-none text-white ">For Doctors</Link>
+                            <Link to="#home" className="d-block text-decoration-none text-white ">Privacy Policy</Link>
+
                         </div>
                     </Col>
+
+
+
+
+
 
                 </Row>
 

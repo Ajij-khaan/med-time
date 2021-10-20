@@ -3,12 +3,19 @@ import React from 'react';
 import { Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
+import { useState } from "react";
 
 const googleImg = 'https://i.ibb.co/p3C2Tq2/google.jpg';
 
 const SignIn = () => {
 
     const { signInUsingGoogle } = useAuth();
+
+    const [email, setEmail] = useState();
+    const handleEmail = e => {
+        console.log(e.target.value);
+    }
+
 
     return (
         <div>
@@ -30,7 +37,7 @@ const SignIn = () => {
                         <Form>
                             <Form.Group className="mb-3" controlId="formBasicEmail">
                                 <Form.Label className="fw-bold mt-4">Email address</Form.Label>
-                                <Form.Control className="rounded-pill" type="email" />
+                                <Form.Control onBlur={handleEmail} className="rounded-pill" type="email" />
 
                             </Form.Group>
 
