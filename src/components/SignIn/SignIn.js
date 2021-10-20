@@ -13,8 +13,6 @@ const SignIn = () => {
 
     fromSignIn();
 
-
-
     return (
         <div>
             <div className="mb-5">
@@ -38,14 +36,12 @@ const SignIn = () => {
                                 <Form.Control onBlur={handleEmail} className="rounded-pill" type="email" />
 
                             </Form.Group>
-
-
                             <Form.Group className="mb-2" controlId="formBasicPassword">
                                 <Form.Label className="fw-bold ">Password</Form.Label>
                                 <Form.Control onBlur={handlePassword} className="rounded-pill " type="password" />
                             </Form.Group>
                             <div className="text-end mb-2">
-                                <button onClick={resetPassword} className="text-primary ">Forget Password</button>
+                                <button onClick={resetPassword} className="text-primary fw-bold ">Forget Password</button>
                             </div>
                             <button className="btn btn-primary rounded-pill w-100 mb-3" variant="primary" type="submit">
                                 Sign In
