@@ -23,8 +23,8 @@ const Banner = () => {
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <h3 className="text-dark">First slide label</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        <h3 className="text-warning fw-bold">Instant Video Consultaion From the Best Doctors</h3>
+                        <p>Get the best user experience on MedTIme website. Search for a doctor and get an instant consultation</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -35,8 +35,9 @@ const Banner = () => {
                     />
 
                     <Carousel.Caption>
-                        <h3>Second slide label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h3 className="text-warning fw-bold">The Simple and Secure Telemedine Solution</h3>
+                        <p>Access hundreds of certified and trusted doctors
+                            and specialists at anytime from anywhere</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -47,8 +48,9 @@ const Banner = () => {
                     />
 
                     <Carousel.Caption>
-                        <h3>Third slide label</h3>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                        <h3 className="text-warning fw-bold">Get Consultation from Home During Covid19</h3>
+                        <p>Improve your and loved ones' health and wellbeing, without having to queue or travel
+                        </p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -59,8 +61,10 @@ const Banner = () => {
                     />
 
                     <Carousel.Caption>
-                        <h3>Third slide label</h3>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                        <h3 className="text-warning fw-bold">Instatt Presctiption Available</h3>
+                        <p>Access your past consultations and prescriptions at any time, and even get your medicine delivered
+
+                        </p>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>

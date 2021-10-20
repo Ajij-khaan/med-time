@@ -22,7 +22,7 @@ const Header = () => {
                             <Nav.Link as={HashLink} to="/about">About US</Nav.Link>
                             {!user?.displayName &&
 
-                                <Nav.Link as={Link} to="/signIn" className="btn btn-primary rounded-pill px-4">SignIn</Nav.Link>
+                                <Nav.Link as={Link} to="/signIn" className="btn btn-primary rounded-pill px-4 fw-bold">SignIn</Nav.Link>
                             }
 
                             {!user?.displayName &&
@@ -36,7 +36,7 @@ const Header = () => {
                             }
 
                         </Nav>
-                    </Navbar.Collapse>>
+                    </Navbar.Collapse>
                 </Container>
             </Navbar>
         </>
