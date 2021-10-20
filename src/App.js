@@ -12,6 +12,7 @@ import ServiceDetails from './components/ServiceDetails/ServiceDetails';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import NotFound from './components/NotFound/NotFound';
 import UnderConstruction from './components/UnderConstruction/UnderConstruction';
+import OurDoctors from './components/OurDoctors/OurDoctors';
 
 
 function App() {
@@ -29,12 +30,15 @@ function App() {
             <Route path="/home">
               <Home></Home>
             </Route>
-            <Route path="/about">
-              <AboutUs></AboutUs>
+            <Route path="/ourDoctors">
+              <OurDoctors></OurDoctors>
             </Route>
             <PrivateRoute path="/serviceDetails/:serviceId">
               <ServiceDetails></ServiceDetails>
             </PrivateRoute>
+            <Route path="/about">
+              <AboutUs></AboutUs>
+            </Route>
             <Route path="/signIn">
               <SignIn></SignIn>
             </Route>
@@ -47,7 +51,6 @@ function App() {
             <Route path="*">
               <NotFound></NotFound>
             </Route>
-
           </Switch>
           <Footer></Footer>
         </Router>
