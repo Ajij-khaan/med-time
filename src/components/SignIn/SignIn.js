@@ -13,7 +13,7 @@ const SignIn = () => {
     const { signInUsingGoogle, handleEmail, handlePassword, handleSubmit, fromSignIn, resetPassword, setIsLoading, setUser } = useAuth();
 
     fromSignIn();
-
+    //Redirect to home after signup using goole
     const location = useLocation();
     const history = useHistory();
     const redirect_uri = location.state?.from || '/home'

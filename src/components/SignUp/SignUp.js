@@ -3,15 +3,32 @@ import React from 'react';
 import { Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
+import { useLocation, useHistory } from 'react-router';
 
 
 const googleImg = 'https://i.ibb.co/p3C2Tq2/google.jpg';
 
 const SignUp = () => {
 
-    const { signInUsingGoogle, handleName, handleEmail, handlePassword, handleSubmit, fromSignUp } = useAuth();
+    const { signInUsingGoogle, handleName, handleEmail, handlePassword, handleSubmit, fromSignUp, setIsLoading, setUser } = useAuth();
 
     fromSignUp();
+    //Redirect to home after signup using goole
+    const location = useLocation();
+    const history = useHistory();
+    const redirect_uri = location.state?.from || '/home'
+
+    const handleGoogleSignIn = () => {
+        signInUsingGoogle()
+            .then((result) => {
+                setUser(result.user);
+                console.log(result.user)
+                history.push(redirect_uri);
+            })
+            .finally(() => setIsLoading(false));
+    }
+
+
     return (
         <div className="mb-5">
             <div className='d-flex justify-content-center align-items-center mt-5 font-body'>
@@ -23,7 +40,7 @@ const SignUp = () => {
                     </div>
                     <div className="border border-gray rounded-pill px-5 py-1 mb-3 fw-bold d-flex justify-content-start">
                         <img src={googleImg} alt="" />
-                        <Button onClick={signInUsingGoogle} className="ps-3 fw-bold">Sign In With Google</Button>
+                        <Button onClick={handleGoogleSignIn} className="ps-3 fw-bold">Sign In With Google</Button>
                     </div>
 
                     <br />
