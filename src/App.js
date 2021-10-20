@@ -11,6 +11,7 @@ import AuthProvider from './context/AuthProvider';
 import ServiceDetails from './components/ServiceDetails/ServiceDetails';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import NotFound from './components/NotFound/NotFound';
+import UnderConstruction from './components/UnderConstruction/UnderConstruction';
 
 
 function App() {
@@ -39,6 +40,9 @@ function App() {
             </Route>
             <Route path="/signUp">
               <SignUp></SignUp>
+            </Route>
+            <Route path="/construction">
+              <UnderConstruction></UnderConstruction>
             </Route>
             <Route path="*">
               <NotFound></NotFound>
