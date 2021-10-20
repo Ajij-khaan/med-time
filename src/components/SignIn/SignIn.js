@@ -22,7 +22,7 @@ const SignIn = () => {
                         </div>
                         <div className="border border-gray rounded-pill px-5 py-1 mb-3 fw-bold d-flex justify-content-start">
                             <img src={googleImg} alt="" />
-                            <Button onClick={signInUsingGoogle} className="ps-3">Sign In With Google</Button>
+                            <Button onClick={signInUsingGoogle} className="ps-3 fw-bold">Sign In With Google</Button>
                         </div>
 
                         <br />

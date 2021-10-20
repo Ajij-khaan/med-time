@@ -2,37 +2,37 @@
     {
         "id": 1,
         "name": "Covid-19 Consultation",
-        "description": "Bret",
-        "img": "https://i.ibb.co/9pKdxvy/3.jpg"
+        "description": "This disease was earlier referred to as ‘2019 novel coronavirus’. Bangladesh is currently experiencing a second wave of COVID-19 cases. The death toll of COVID-19 in Bangladesh is the second highest in the world. Consider an online COVID consultation with an expert Apollo Doctor if your symptoms persist.",
+        "img": "https://i.ibb.co/hV1LK1X/doctor-wearing-gloves-face-mask-holding-smartphone.jpg"
     },
     {
         "id": 2,
-        "name": "SApecial Followup",
-        "description": "Bret",
-        "img": "https://i.ibb.co/6XDLm6j/4.jpg"
+        "name": "Special Follow Up",
+        "description": "Care given to a patient over time after finishing treatment for a disease. Follow-up care involves regular medical checkups, which may include a physical exam, blood tests, and imaging tests. Follow-up care checks for health problems that may occur months or years after treatment ends, including the development of other types of cancer. Follow-up care is given after positive screening test results, such as a positive Pap test result. ",
+        "img": "https://i.ibb.co/0t7JJKg/followUp.jpg"
     },
     {
         "id": 3,
-        "name": "Cardiology",
-        "description": "Bret",
-        "img": "https://i.ibb.co/5RHMdW2/6.jpg"
+        "name": "Gyneocology",
+        "description": "We recognize that this is a time of many questions and concerns. Our care team is here to support you. Anyone experiencing a fever, respiratory symptoms, GI symptoms, or a change in ability to taste or smell should NOT come unannounced to a doctor’s office. We ask that you contact us first.",
+        "img": "https://i.ibb.co/YpsWNMv/gyneocologiest.jpg"
     },
     {
         "id": 4,
-        "name": "Mental Health",
-        "description": "Bret",
-        "img": "https://i.ibb.co/jbGKY9B/5.jpg"
+        "name": "Dermatology",
+        "description": "Department of Dermatology & Venereology of Evercare Hospital Dhaka provides advanced diagnosis and management of diseases of the skin, hair and nails, as well as venereal (sexually transmitted) diseases. The Department aims to deliver the highest quality of care to patients with skin disorders, including skin cancers, immune and allergic processes, diseases of other organ systems with skin manifestations and venereal diseases. We provide both adult and paediatric dermatological services, as well as cosmetic dermatology. The department applies the latest advances in dermatology in an atmosphere of compassion and respect. We have advanced Laser Centre, Phototherapy Centre, specialized Skin Rejuvenating Program, and we perform procedures like electrocautery & electrosurgery, cryosurgery, intralesional injection, dermoscopy, iontophoresis, and skin biopsies.",
+        "img": "https://i.ibb.co/fNkb3JQ/dermatoloy.jpg"
     },
     {
         "id": 5,
-        "name": "Orthopedics",
-        "description": "Bret",
-        "img": "https://i.ibb.co/PYj8nN9/2.jpg"
+        "name": "Mental Health",
+        "description": "If you need support for a specific mental health problem—or if you’re having problems sleeping, controlling your anger, or readjusting to civilian life—you are not alone. And we can help.Over 1.7 million Veterans received mental health services at VA last year. Our services range from peer support with other Veterans to counseling, therapy, medication, or a combination of these options. Our goal is to help you take charge of your treatment and live a full and meaningful life.",
+        "img": "https://i.ibb.co/VxwMK7F/mental.jpg"
     },
     {
         "id": 6,
-        "name": "Gynecology",
-        "description": "Bret",
-        "img": "https://i.ibb.co/PYj8nN9/2.jpg"
+        "name": "Cardiology",
+        "description": "The Cardiology Department of Evercare Hospital Dhaka has gained reputation for its dynamic and innovation in the diagnosis, investigation and treatment of patients with all forms of heart diseases, both generally encountered and complex cases. We have a dedicated unit of four full-time Consultants, and a team of junior doctors, nurses, and technicians trained to the highest standard in cardiac assessment. Our specialists diagnose and manage full range of heart conditions, and we are fully equipped with state-of-the-art facilities and complete range of services – from cardiac investigations to Interventional Cardiology procedures in ultramodern Catheterization Lab (Cath Lab). Cardio-pulmonary rehabilitation program is offered to patients through our Physical Medicine & Rehabilitation Centre. The hospital offers a multidisciplinary in-patient program, and also has complete Coronary Care Unit and Cardiothoracic ICU for critical cardiac patients. For emergency patients, we have 24-hour Accident & Emergency Centre and specialized team for stabilization and treatment of the patient.",
+        "img": "https://i.ibb.co/5RHMdW2/6.jpg"
     }
 ]

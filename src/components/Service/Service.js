@@ -11,7 +11,7 @@ const Service = (props) => {
                     <Card.Body>
                         <Card.Title>{name}</Card.Title>
                         <Card.Text>
-                            {description}
+                            {description.slice(0, 250)}
                         </Card.Text>
                         <button className="btn btn-primary">More Details</button>
                     </Card.Body>

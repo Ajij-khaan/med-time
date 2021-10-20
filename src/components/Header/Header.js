@@ -28,7 +28,7 @@ const Header = () => {
                             <div className="text-white d-flex align-items-center">Howday! {user.displayName} </div>
                         }
                         {user?.displayName &&
-                            <button onClick={logOut} className="text-white btn btn-primary rounded-pill ms-3">Loguout </button>
+                            <button onClick={logOut} className="text-white btn btn-primary rounded-pill ms-2">Sign Out </button>
                         }
 
                     </Nav>
