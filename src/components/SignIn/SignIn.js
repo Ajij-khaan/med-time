@@ -5,14 +5,11 @@ import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
 
-
-
-
 const googleImg = 'https://i.ibb.co/p3C2Tq2/google.jpg';
 
 const SignIn = () => {
 
-    const { signInUsingGoogle, handleEmail, handlePassword, handleSubmit, fromSignIn } = useAuth();
+    const { signInUsingGoogle, handleEmail, handlePassword, handleSubmit, fromSignIn, resetPassword } = useAuth();
 
     fromSignIn();
 
@@ -42,11 +39,14 @@ const SignIn = () => {
 
                             </Form.Group>
 
-                            <Form.Group className="mb-3" controlId="formBasicPassword">
+
+                            <Form.Group className="mb-2" controlId="formBasicPassword">
                                 <Form.Label className="fw-bold ">Password</Form.Label>
                                 <Form.Control onBlur={handlePassword} className="rounded-pill " type="password" />
                             </Form.Group>
-
+                            <div className="text-end mb-2">
+                                <button onClick={resetPassword} className="text-primary ">Forget Password</button>
+                            </div>
                             <button className="btn btn-primary rounded-pill w-100 mb-3" variant="primary" type="submit">
                                 Sign In
                             </button>
