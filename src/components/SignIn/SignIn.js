@@ -2,6 +2,7 @@ import Button from '@restart/ui/esm/Button';
 import React from 'react';
 import { Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { useLocation, useHistory } from 'react-router';
 import useAuth from '../../hooks/useAuth';
 
 
@@ -9,9 +10,23 @@ const googleImg = 'https://i.ibb.co/p3C2Tq2/google.jpg';
 
 const SignIn = () => {
 
-    const { signInUsingGoogle, handleEmail, handlePassword, handleSubmit, fromSignIn, resetPassword } = useAuth();
+    const { signInUsingGoogle, handleEmail, handlePassword, handleSubmit, fromSignIn, resetPassword, setIsLoading, setUser } = useAuth();
 
     fromSignIn();
+
+    const location = useLocation();
+    const history = useHistory();
+    const redirect_uri = location.state?.from || '/home'
+
+    const handleGoogleSignIn = () => {
+        signInUsingGoogle()
+            .then((result) => {
+                setUser(result.user);
+                console.log(result.user)
+                history.push(redirect_uri);
+            })
+            .finally(() => setIsLoading(false));
+    }
 
     return (
         <div>
@@ -25,7 +40,7 @@ const SignIn = () => {
                         </div>
                         <div className="border border-gray rounded-pill px-5 py-1 mb-3 fw-bold d-flex justify-content-start">
                             <img src={googleImg} alt="" />
-                            <Button onClick={signInUsingGoogle} className="ps-3 fw-bold">Sign In With Google</Button>
+                            <Button onClick={handleGoogleSignIn} className="ps-3 fw-bold">Sign In With Google</Button>
                         </div>
 
                         <br />
