@@ -15,6 +15,7 @@ const useFirebase = () => {
     const [isLogin, setIsLogin] = useState(false);
 
     const [error, setError] = useState();
+    const [success, setSuccess] = useState('')
     const [isLoading, setIsLoading] = useState(true);
 
     const auth = getAuth();
@@ -23,19 +24,17 @@ const useFirebase = () => {
     const signInUsingGoogle = () => {
         setIsLoading(true)
         return signInWithPopup(auth, googleProvider);
-
-        // .catch((error) => {
-        //     setError(error.message);
-        // });
     }
 
     //checking if already login
     const fromSignIn = () => {
-        setIsLogin(true)
+        setIsLogin(true);
+
     }
     //checking if already login
     const fromSignUp = () => {
-        setIsLogin(false)
+        setIsLogin(false);
+
     }
 
     // Email Authentication Section
@@ -50,20 +49,25 @@ const useFirebase = () => {
     }
     const handleSubmit = e => {
         e.preventDefault();
-        console.log(isLogin);
+
+        if (password.length < 8) {
+            setError("Your password must be at least 8 characters");
+            return;
+        }
+        // console.log(isLogin);
         isLogin ? processSignIn(email, password) : processSignUp(email, password);
     }
 
     //Firebase Login System
     const processSignIn = (email, password) => {
-
         signInWithEmailAndPassword(auth, email, password)
             .then((result) => {
                 // Signed in 
                 const user = result.user;
                 setUser(user);
-                console.log(user)
+                // console.log(user)
                 setError('')
+                setSuccess('Registration Successfull')
             })
             .catch((error) => {
                 setError(error.message);
@@ -77,8 +81,9 @@ const useFirebase = () => {
                 setUser(user);
                 setUserName();
                 verifyEmail();
-                console.log(user)
+                // console.log(user)
                 setError('')
+                setSuccess('Registration Successfull')
             })
             .catch((error) => {
                 setError(error.message);
@@ -145,6 +150,7 @@ const useFirebase = () => {
         user,
         setUser,
         error,
+        success,
         isLoading,
         signInUsingGoogle,
         logOut,
@@ -161,6 +167,7 @@ const useFirebase = () => {
         email,
         password,
         setIsLoading
+
 
     }
 }

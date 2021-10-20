@@ -1,42 +1,42 @@
 [
     {
         "id": 1,
-        "name": "CoJose R. Abando, MD",
+        "name": "Dr. CoJose R. Abando, MD",
         "specialist": "Medicine",
         "address": "303 N. Clyde Morris Blvd., Daytona Beach, FL 32114",
         "img": "https://i.ibb.co/gTtHnYy/1.jpg"
     },
     {
         "id": 2,
-        "name": "Fariya S. Afridi, MD",
+        "name": "Dr. Fariya S. Afridi, MD",
         "specialist": "Cardiology",
         "address": "311 N Clyde Morris Blvd., Ste 300, Daytona Beach, FL 32114",
         "img": "https://i.ibb.co/wLj5XF1/2.jpg"
     },
     {
         "id": 3,
-        "name": "Felicitas G. Agana, MD",
+        "name": "Dr. Felicitas G. Agana, MD",
         "specialist": "Neorology",
         "address": "1490 SE Magnolia Extension, Ocala, FL 34471",
         "img": "https://i.ibb.co/HxDtgrQ/3.jpg"
     },
     {
         "id": 4,
-        "name": "Abdul Q. Ahmed, MD",
+        "name": "Dr. Abdul Q. Ahmed, MD",
         "specialist": "Orthopedics",
         "address": "303 N. Clyde Morris Blvd., Daytona Beach, FL 32119",
         "img": "https://i.ibb.co/7rszMns/4.jpg"
     },
     {
         "id": 5,
-        "name": "Salman Ahmed, MD",
+        "name": "Dr. Salman Ahmed, MD",
         "specialist": "Opthalmologist",
         "address": "1673 Mason Avenue, Suite 305, Daytona Beach, FL 32117",
         "img": "https://i.ibb.co/6mYNshg/5.jpg"
     },
     {
         "id": 6,
-        "name": "Shahabuddin Ahmed, DO",
+        "name": "Dr. Sihab Ahmed, DO",
         "specialist": "Gyenecologist",
         "address": "1490 SE Magnolia Extension, Ocala, FL 34471",
         "img": "https://i.ibb.co/dJLwmYh/7.jpg"

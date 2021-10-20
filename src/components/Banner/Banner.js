@@ -6,15 +6,10 @@ const img2 = 'https://i.ibb.co/HCzXBkQ/Female-patient-in-a-video-conference-from
 const img3 = 'https://i.ibb.co/Ptdx2Mt/Female-patient-in-a-video-conference-from-home-with-her-doctor.jpg';
 const img4 = 'https://i.ibb.co/KKDhQ4m/Female-patient-in-a-video-conference-from-home-with-her-doctor.jpg';
 
-
-
-
-
-
-
 const Banner = () => {
     return (
         <div>
+            {/* Slider */}
             <Carousel>
                 <Carousel.Item >
                     <img

@@ -10,7 +10,7 @@ const googleImg = 'https://i.ibb.co/p3C2Tq2/google.jpg';
 
 const SignIn = () => {
 
-    const { signInUsingGoogle, handleEmail, handlePassword, handleSubmit, fromSignIn, resetPassword, setIsLoading, setUser, error } = useAuth();
+    const { signInUsingGoogle, handleEmail, handlePassword, handleSubmit, fromSignIn, resetPassword, setIsLoading, setUser, error, success } = useAuth();
 
     fromSignIn();
     //Redirect to home after signup using goole
@@ -66,6 +66,9 @@ const SignIn = () => {
                             </button>
                         </form>
                         <p>Noy yet Registerd? <span className="fw-bold text-primary"><Link to="/signUp" className="text-decoration-none">SignUp Here</Link></span></p>
+                        <div className="text-end mb-2">
+                            <button className="text-success fs-3 fw-bold ">{success}</button>
+                        </div>
                     </div>
                 </div>
             </div>

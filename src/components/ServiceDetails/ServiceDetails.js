@@ -15,6 +15,8 @@ const ServiceDetails = () => {
             .then(data => setServices(data))
     }, [])
 
+
+    //Set each time service with id and set dpendency
     useEffect(() => {
         setShowService(services.find(service => (service.id === parseInt(serviceId))));
     }, [services])

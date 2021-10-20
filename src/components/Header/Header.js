@@ -21,6 +21,7 @@ const Header = () => {
                             <Nav.Link as={HashLink} to="/home#featured-services">Service</Nav.Link>
                             <Nav.Link as={HashLink} to="/ourDoctors">Our Specialist</Nav.Link>
                             <Nav.Link as={HashLink} to="/about">About US</Nav.Link>
+                            {/* Check login or not and show the name */}
                             {!user?.displayName &&
 
                                 <Nav.Link as={Link} to="/signIn" className="btn btn-primary rounded-pill px-4 fw-bold">SignIn</Nav.Link>
@@ -35,7 +36,6 @@ const Header = () => {
                             {user?.displayName &&
                                 <button onClick={logOut} className="text-white btn btn-primary rounded-pill ms-2 fw-bold">Sign Out </button>
                             }
-
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

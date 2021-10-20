@@ -18,7 +18,6 @@ import OurDoctors from './components/OurDoctors/OurDoctors';
 function App() {
   return (
     <div className="App">
-      {/* <h1 className="font-body fw-bold">THis is header</h1> */}
 
       <AuthProvider>
         <Router>

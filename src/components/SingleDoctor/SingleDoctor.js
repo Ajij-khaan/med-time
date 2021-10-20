@@ -5,7 +5,7 @@ const SingleDoctor = (props) => {
     const { name, address, specialist, img } = props.doctor;
     return (
         <div>
-            <div className="transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 ">
+            <div className="transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 shadow-sm">
                 <Col>
                     <Card className="border-  p-3 bg-light">
                         <div className="d-flex">

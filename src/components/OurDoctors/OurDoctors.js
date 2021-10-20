@@ -16,7 +16,7 @@ const OurDoctors = () => {
 
     return (
         <div className="font-body ">
-            <h1 className="fs1 text-primary mt-3 py-2 fw-bold text-uppercase">Our Specialist</h1>
+            <h1 className="fs1 text-primary mt-3 py-2 fw-bold text-uppercase">Specialize Doctors</h1>
             <Container className="mb-5">
                 <Row id="services" xs={1} md={2} lg={3} className="g-4 mt-5border-primary">
                     {

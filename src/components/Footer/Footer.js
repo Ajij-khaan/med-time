@@ -32,14 +32,7 @@ const Footer = () => {
 
                         </div>
                     </Col>
-
-
-
-
-
-
                 </Row>
-
             </Container >
         </div >
     );
